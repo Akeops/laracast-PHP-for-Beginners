@@ -1,8 +1,7 @@
 <?php
-//include_once '../contact.php';
-require('partials/head.php');
-require('partials/nav.php');
-require('./partials/banner.php') ;
+require __DIR__ . '/partials/head.php' ;
+require __DIR__ . '/partials/nav.php' ;
+require __DIR__ . '/partials/banner.php' ;
 
 ?>
     <main>
@@ -10,4 +9,4 @@ require('./partials/banner.php') ;
             Hello chad. This is Contact page.
         </div>
     </main>
-<?php require('partials/footer.php') ?>
+<?php require __DIR__ . '/partials/footer.php' ; ?>
