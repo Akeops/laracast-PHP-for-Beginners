@@ -8,16 +8,16 @@
                     <div class="hidden md:block">
                          <div class="ml-10 flex items-baseline space-x-4">
                               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                              <a href="/" class="<?php if ($_SERVER['REQUEST_URI'] === '/') { echo "text-white bg-gray-900 "; }
-                                  ?>text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                              <a href="/" class="<?= urlIs('/') ? "text-white bg-gray-900 " : "text-gray-300 ";
+                                  ?> hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                  aria-current="page">Home</a>
-                              <a href="/contact.php" class="<?php if ($_SERVER['REQUEST_URI'] === '/contact.php') {
-                                  echo "text-white bg-gray-900 "; } ?>
+                              <a href="/contact.php" class="<?= urlIs('/contact.php') ?
+                               "text-white bg-gray-900 " : "text-gray-300 "; ?>
                                   rounded-md px-3 py-2
-                              text-sm font-medium
-                              text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
-                              <a href="/about.php" class="class=<?php if ($_SERVER['REQUEST_URI'] === '/about.php')
-                              { echo "text-white bg-gray-900 "; } ?> rounded-md px-3 py-2 text-sm font-medium
+                              text-sm font-medium hover:bg-gray-700 hover:text-white">Contact</a>
+                              <a href="/about.php" class="class=<?= urlIs('/about.php') ?
+                              "text-white bg-gray-900 " : "text-gray-300 "; ?> rounded-md px-3 py-2 text-sm
+                              font-medium
                               text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
                          </div>
                     </div>
